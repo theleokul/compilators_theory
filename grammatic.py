@@ -54,6 +54,7 @@ grams = [
     Grammatic(rule=('P', 'f(M,M,M)'), pol_not='', cond=all_ops[:], proc='[F ARGS 3]'),
     Grammatic(rule=('P', 'sin(M)'), pol_not='', cond=all_ops[:], proc='[SIN]'),  # S - represents sinus
     Grammatic(rule=('P', '-E'), pol_not='', cond=all_ops[:], proc='[UNARY MINUS]'),  # _ - represents unary minus
+    Grammatic(rule=('P', '-M'), pol_not='', cond=all_ops[:], proc='[UNARY MINUS]'),
     Grammatic(rule=('P', 'a'), pol_not='a', cond=all_ops[:], proc='a'),
     Grammatic(rule=('P', '(M)'), pol_not='', cond=all_ops[:], proc='')
 ]
