@@ -49,10 +49,10 @@ grams = [
     Grammatic(rule=('F', 'F^P'), pol_not='FP^', cond=all_ops[:], proc='^'),
     Grammatic(rule=('F', 'P'), pol_not='P', cond=all_ops[:], proc=''),
     Grammatic(rule=('P', 'f()'), pol_not='', cond=all_ops[:], proc='[F ARGS 0]'),
-    Grammatic(rule=('P', 'f(E)'), pol_not='', cond=all_ops[:], proc='[F ARGS 1]'),  # F - represents specific function
-    Grammatic(rule=('P', 'f(E,E)'), pol_not='', cond=all_ops[:], proc='[F ARGS 2]'),
-    Grammatic(rule=('P', 'f(E,E,E)'), pol_not='', cond=all_ops[:], proc='[F ARGS 3]'),
-    Grammatic(rule=('P', 'sin(E)'), pol_not='', cond=all_ops[:], proc='[SIN]'),  # S - represents sinus
+    Grammatic(rule=('P', 'f(M)'), pol_not='', cond=all_ops[:], proc='[F ARGS 1]'),  # F - represents specific function
+    Grammatic(rule=('P', 'f(M,M)'), pol_not='', cond=all_ops[:], proc='[F ARGS 2]'),
+    Grammatic(rule=('P', 'f(M,M,M)'), pol_not='', cond=all_ops[:], proc='[F ARGS 3]'),
+    Grammatic(rule=('P', 'sin(M)'), pol_not='', cond=all_ops[:], proc='[SIN]'),  # S - represents sinus
     Grammatic(rule=('P', '-E'), pol_not='', cond=all_ops[:], proc='[UNARY MINUS]'),  # _ - represents unary minus
     Grammatic(rule=('P', 'a'), pol_not='a', cond=all_ops[:], proc='a'),
     Grammatic(rule=('P', '(M)'), pol_not='', cond=all_ops[:], proc='')

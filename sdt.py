@@ -43,6 +43,9 @@ def main():
 
     df = pd.DataFrame(g.steps, columns=['stack', 'cur_let', 'seq_rest', 'rule_i', 'pol_not'])
 
+    pd.options.display.width = 1200
+    pd.options.display.max_colwidth = 100
+    pd.options.display.max_columns = 100
     with pd.option_context('display.max_rows', None):
         print(df)
 
