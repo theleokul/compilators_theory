@@ -21,12 +21,19 @@ if seq[-1] != '#':
     seq += '#'
 
 
+def iterate_through_grams(seq, seq_i):
+    for gram_i, gram in enumerate(g.grams):
+        if gram.process_sdt(seq, seq_i, gram_i):
+            return True
+    return False
+
+
 def main():
     for seq_i, let in enumerate(seq):
         # let - current symbol (R)
 
         while True:
-            if g.iterate_through_grams(seq, seq_i):
+            if iterate_through_grams(seq, seq_i):
                 continue
             else:
                 break
@@ -35,7 +42,9 @@ def main():
         g.stack += let
 
     df = pd.DataFrame(g.steps, columns=['stack', 'cur_let', 'seq_rest', 'rule_i', 'pol_not'])
-    print(df)
+
+    with pd.option_context('display.max_rows', None):
+        print(df)
 
 
 if __name__ == '__main__':
